@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Detalle Mantenimiento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list lines ="full">
+    
+    <img class="icon" src="https://image.flaticon.com/icons/svg/887/887189.svg" alt="">
+
+      <ion-item *ngIf = "todom">
+        <ion-input required type="text" placeholder="mantenimiento" [(ngModel)]="todom.categoria">
+        </ion-input>
+      </ion-item>
+
+      <ion-item *ngIf = "todom">
+        <ion-input required type="number" placeholder="numero Id" [(ngModel)]="todom.id"></ion-input>
+      </ion-item>
+      
+    <br>
+      <div id="boton">
+        <ion-button  color= "secondary" expand="block" (click)="saveTodo()"> Guardar</ion-button>
+      </div>
+    <br>
+
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" color="secondary">
+    <ion-fab-button routerLink="/mantenimientos" routerDirection="forward" color="danger" (click)="onRemove(todomIdd)">
+  <ion-icon name ="trash"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

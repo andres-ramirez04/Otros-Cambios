@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-list lines ="full">
+    
+    <img class="icon" src="https://image.flaticon.com/icons/png/512/477/477796.png" alt="">
+
+      <ion-item *ngIf = "todo">
+        <ion-input required type="text" placeholder="categoria" [(ngModel)]="todo.categoria">
+        </ion-input>
+      </ion-item>
+
+      <ion-item *ngIf = "todo">
+        <ion-input required type="number" placeholder="numero Id" [(ngModel)]="todo.id"></ion-input>
+      </ion-item>
+      
+    <br>
+      <div id="boton">
+        <ion-button  color= "secondary" expand="block" (click)="saveTodo()"> Guardar</ion-button>
+      </div>
+    <br>
+
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" color="secondary">
+    <ion-fab-button routerLink="/rproductos" routerDirection="forward" color="danger" (click)="onRemove(todoIdd)">
+  <ion-icon name ="trash"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
