@@ -1,14 +1,4 @@
-#boton {
-    text-align: center;
-  }
-  
-  #boton ion-button {
-    padding-left: 20px;
-    padding-right: 20px; 
-  }
-
-
-  #item ion-input , ion-item{
+#item ion-input , ion-item{
     padding-left: 20px;
     padding-right: 20px;
     }  
@@ -21,4 +11,13 @@
       margin-right: auto;
       width: 50%;
       padding-top : 24px;
+  }
+
+  #boton {
+    text-align: center;
+  }
+  
+  #boton ion-button {
+    padding-left: 20px;
+    padding-right: 20px;
   }

@@ -15,7 +15,7 @@ export class DetalleMPage implements OnInit {
     categoria:'',
     id:0
   };
-  todomIdd = null;
+  todomIdd = null; 
 
   constructor(
     private route:ActivatedRoute, private nav:NavController,

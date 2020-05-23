@@ -40,6 +40,21 @@ const routes: Routes = [
   {
     path: 'detalle-m',
     loadChildren: () => import('./home/detalle-m/detalle-m.module').then( m => m.DetalleMPageModule)
+  },
+
+  {
+    path: 'ventas',
+    loadChildren: () => import('./home/ventas/ventas.module').then( m => m.VentasPageModule)
+  },
+
+  {
+    path: 'detalle-v/:idd',
+    loadChildren: () => import('./home/detalle-v/detalle-v.module').then( m => m.DetalleVPageModule)
+  },
+
+  {
+    path: 'detalle-v',
+    loadChildren: () => import('./home/detalle-v/detalle-v.module').then( m => m.DetalleVPageModule)
   }
 ];
 

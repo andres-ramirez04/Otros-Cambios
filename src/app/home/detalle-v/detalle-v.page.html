@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Detalle Ventas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list lines ="full">
+    
+    
+      <ion-item *ngIf = "ventas">
+        <ion-input required type="text" placeholder="producto" [(ngModel)]="ventas.nombrep">
+        </ion-input>
+      </ion-item>
+
+      <ion-item *ngIf = "ventas">
+        <ion-input required type="number" placeholder="Id" [(ngModel)]="ventas.id"></ion-input>
+      </ion-item>
+      
+      <ion-item *ngIf = "ventas">
+        <ion-input required type="number" placeholder="cantidad" [(ngModel)]="ventas.cantidad"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf = "ventas">
+        <ion-input required type="text"  placeholder="fecha" [(ngModel)]="ventas.fecha"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf = "ventas">
+        <ion-input required type="number" placeholder="total" [(ngModel)]="ventas.total"></ion-input>
+      </ion-item>
+
+    <br>
+      <div id="boton">
+        <ion-button  color= "secondary" expand="block" (click)="saveTodo()"> Comprar</ion-button>
+      </div>
+    <br>
+
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" color="secondary">
+    <ion-fab-button routerLink="/ventas" routerDirection="forward" color="danger" (click)="onRemove(ventasIdd)">
+  <ion-icon name ="trash"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

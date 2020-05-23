@@ -22,6 +22,14 @@ const routes: Routes = [
   {
     path: 'detalle-m',
     loadChildren: () => import('./detalle-m/detalle-m.module').then( m => m.DetalleMPageModule)
+  },
+  {
+    path: 'ventas',
+    loadChildren: () => import('./ventas/ventas.module').then( m => m.VentasPageModule)
+  },
+  {
+    path: 'detalle-v',
+    loadChildren: () => import('./detalle-v/detalle-v.module').then( m => m.DetalleVPageModule)
   }
 ];
 
